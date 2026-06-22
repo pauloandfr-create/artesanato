@@ -1,26 +1,17 @@
-# Artesanato App
+# artesanato_app
 
-Aplicativo Flutter para gerenciamento de produtos de uma loja de artesanato.
+A new Flutter project.
 
-## Sobre o projeto
+## Getting Started
 
-Este projeto permite:
-- cadastrar produtos;
-- editar informações e imagens;
-- visualizar os itens em uma lista organizada;
-- definir a logo da loja.
+This project is a starting point for a Flutter application.
 
-## Como rodar
+A few resources to get you started if this is your first Flutter project:
 
-1. Instale o Flutter.
-2. Execute:
-   ```bash
-   flutter pub get
-   flutter run
-   ```
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
 
-## Tecnologias
-
-- Flutter
-- Dart
-- image_picker
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

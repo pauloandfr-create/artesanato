@@ -97,14 +97,14 @@ class CardProduto extends StatelessWidget {
             // Botão para editar o produto
             IconButton(
               onPressed: aoEditar,
-              tooltip: 'Editar produto',
+              tooltip: 'Editar',
               icon: const Icon(Icons.edit),
             ),
 
             // Botão para excluir o produto
             IconButton(
               onPressed: aoExcluir,
-              tooltip: 'Excluir produto',
+              tooltip: 'Excluir',
               icon: const Icon(
                 Icons.delete,
                 color: Colors.red,

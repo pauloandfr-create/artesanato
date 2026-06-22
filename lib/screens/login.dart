@@ -43,7 +43,7 @@ class _TelaLoginState extends State<TelaLogin> {
       // Mostra uma mensagem caso o login esteja incorreto
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text("Usuário ou senha incorretos."),
+          content: Text("Nome ou senha incorretos."),
         ),
       );
     }
@@ -60,7 +60,7 @@ class _TelaLoginState extends State<TelaLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login"),
+        title: const Text("Tela de Login"),
         centerTitle: true,
       ),
       body: Padding(
@@ -72,7 +72,7 @@ class _TelaLoginState extends State<TelaLogin> {
             TextField(
               controller: controladorNome,
               decoration: const InputDecoration(
-                labelText: "Usuário",
+                labelText: "Nome",
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.person),
               ),
