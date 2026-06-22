@@ -1,17 +1,12 @@
-# artesanato_app
+Artesanato
 
-A new Flutter project.
+Aplicativo mobile desenvolvido em Flutter para cadastro produtos, login.
 
-## Getting Started
+📱 Sobre o Projeto
 
-This project is a starting point for a Flutter application.
+O Artesanato é um aplicativo que conecta artesãos e clientes, permitindo a visualização de produtos.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+✨ Funcionalidades
+° tela de login
+° cadastro de produtos
+° selecionar imagens
