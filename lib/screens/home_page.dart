@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
 
   ScaffoldMessenger.of(context).showSnackBar(
     const SnackBar(
-      content: Text('Não foi possível escolher a logo da loja.'),
+      content: Text('Não foi possível selecionar a logo da loja.'),
         ),
       );
     }
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: produtos.isEmpty
                   ? const Center(
-                      child: Text('Nenhum produto cadastrado.'),
+                      child: Text('Nenhum produto cadastrado ainda.'),
                     )
                   : ListView.builder(
                       itemCount: produtos.length,

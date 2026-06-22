@@ -143,7 +143,7 @@ class _CadastroProdutoState extends State<CadastroProduto> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(editando ? 'Editar Produto' : 'Cadastrar Produto'),
+        title: Text(editando ? 'Editar produto' : 'Cadastrar produto'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -173,7 +173,7 @@ class _CadastroProdutoState extends State<CadastroProduto> {
                           children: [
                             Icon(Icons.add_photo_alternate, size: 48),
                             SizedBox(height: 8),
-                            Text('Selecionar Foto'),
+                            Text('Selecionar foto'),
                           ],
                         ),
                 ),
@@ -185,7 +185,7 @@ class _CadastroProdutoState extends State<CadastroProduto> {
               TextFormField(
                 controller: controladorNome,
                 decoration: const InputDecoration(
-                  labelText: 'Nome do Produto',
+                  labelText: 'Nome do produto',
                   border: OutlineInputBorder(),
                 ),
                 validator: (valor) {
@@ -247,7 +247,7 @@ class _CadastroProdutoState extends State<CadastroProduto> {
               ElevatedButton.icon(
                 onPressed: escolherFoto,
                 icon: const Icon(Icons.photo_library),
-                label: const Text('Selecionar Foto'),
+                label: const Text('Selecionar foto'),
               ),
 
               const SizedBox(height: 12),
@@ -255,7 +255,7 @@ class _CadastroProdutoState extends State<CadastroProduto> {
               FilledButton.icon(
                 onPressed: salvarProduto,
                 icon: const Icon(Icons.save),
-                label: const Text('Salvar Produto'),
+                label: const Text('Salvar produto'),
               ),
             ],
           ),
