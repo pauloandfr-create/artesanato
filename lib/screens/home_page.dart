@@ -1,8 +1,4 @@
-import 'dart:io';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 import '../models/produto.dart';
 import '../widgets/card_produto.dart';
@@ -20,48 +16,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // Lista que armazena os produtos cadastrados
   List<Produto> produtos = [];
-
-  // Variáveis usadas para guardar a logo da loja
-  File? logoLoja;
-  Uint8List? logoLojaBytes;
-
-  // Objeto usado para selecionar imagens da galeria
-  final ImagePicker seletorImagem = ImagePicker();
-
-  // Função para escolher a logo da loja
-  Future<void> escolherLogo() async {
-    try {
-      final XFile? imagem = await seletorImagem.pickImage(
-        source: ImageSource.gallery,
-      );
-
-      if (imagem == null || !mounted) {
-        return;
-      }
-
-      if (kIsWeb) {
-        final Uint8List bytesImagem = await imagem.readAsBytes();
-
-        setState(() {
-          logoLojaBytes = bytesImagem;
-          logoLoja = null;
-        });
-      } else {
-        setState(() {
-          logoLoja = File(imagem.path);
-          logoLojaBytes = null;
-        });
-      }
-    } catch (erro) {
-  if (!mounted) return;
-
-  ScaffoldMessenger.of(context).showSnackBar(
-    const SnackBar(
-      content: Text('Não foi possível escolher a logo da loja.'),
-        ),
-      );
-    }
-  }
 
   // Função que abre a tela de cadastro de produto
   Future<void> adicionarProduto() async {
@@ -104,23 +58,8 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // Função que retorna a imagem correta da logo
-  ImageProvider? imagemDaLogo() {
-    if (logoLojaBytes != null) {
-      return MemoryImage(logoLojaBytes!);
-    }
-
-    if (!kIsWeb && logoLoja != null) {
-      return FileImage(logoLoja!);
-    }
-
-    return null;
-  }
-
   @override
   Widget build(BuildContext context) {
-    final bool possuiLogo = logoLoja != null || logoLojaBytes != null;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Loja de Artesanato'),
@@ -144,30 +83,6 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            // Área onde a logo da loja é exibida
-            GestureDetector(
-              onTap: escolherLogo,
-              child: CircleAvatar(
-                radius: 55,
-                backgroundColor: Colors.teal.shade100,
-                backgroundImage: imagemDaLogo(),
-                child: !possuiLogo
-                    ? Icon(
-                        Icons.store,
-                        size: 48,
-                        color: Colors.teal.shade800,
-                      )
-                    : null,
-              ),
-            ),
-
-            const SizedBox(height: 8),
-
-            const Text(
-              'Toque para escolher a logo da loja',
-              textAlign: TextAlign.center,
-            ),
-
             const SizedBox(height: 16),
 
             // Lista que mostra os produtos cadastrados
